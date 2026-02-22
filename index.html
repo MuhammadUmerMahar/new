@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form | Sigma Web Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Sigma Web Development Course</h1>
+            <p class="subtitle">Application Form</p>
+
+            <form id="applicationForm">
+
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" required placeholder="Enter your age (18-60)">
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="inline-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required>
+                            Male
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Select Course *</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select --</option>
+                        <option value="frontend">Front-end Development</option>
+                        <option value="backend">Back-end Development</option>
+                        <option value="fullstack">Full-stack Development</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required>
+                        I agree to the terms and conditions *
+                    </label>
+                </div>              
+                <div class="form-group">
+                    <label for="comment">Comment *</label>
+                    <textarea id="comment" name="comment" rows="5" required placeholder="Enter your comment here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="runBtn">
+                    Submit Application
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
