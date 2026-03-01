@@ -50,13 +50,22 @@ label {
     margin-bottom: 10px;
 }
 
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
 .checkbox-label {
     display: flex;
-    gap: 8px;
-    align-items: center;
-    font-weight: 300;
-    cursor:pointer;
-    white-space: nowrap;
+    align-items: flex-start;   /* better for multi-line text */
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.checkbox-label input {
+    margin-top: 4px;   /* aligns checkbox with first line of text */
+    flex-shrink: 0;    /* prevents checkbox from shrinking */
 }
 
 input,
@@ -79,20 +88,6 @@ textarea:focus {
 .inline-group {
     display: flex;
     gap: 20px;
-}
-
-.checkbox-group {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 0;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: right;
-    gap: 22px;
-    width: 15%;
-    height: 45%;
 }
 
 .btn-submit {
@@ -127,4 +122,22 @@ textarea:focus {
 
 textarea {
     resize: none;
+}
+.checkbox-label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: start;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 25px;
+    }
+
+    .checkbox-label {
+        font-size: 13px;
+    }
 }
