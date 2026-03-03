@@ -2,9 +2,55 @@
 <html>
 <head>
     <title>Application Submitted</title>
+    <style>
+body {
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121835, #764ba2);
+}
+    
+    .success-container {
+        background: rgb(55, 55, 115);
+        padding: 53px 60px;
+        border-radius: 17px;
+        text-align: center;
+        box-shadow: 0 15px 35px #3a5690;
+        
+    }
+    
+    .animate-title {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeSlideUp 1s ease forwards;
+    }
+    
+    .animate-text {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeSlideUp 1s ease forwards;
+        animation-delay: 0.4s;
+    }
+    
+    @keyframes fadeSlideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
 </head>
-<body style="font-family:Poppins; text-align:center; margin-top:100px;">
-    <h1>Application Submitted</h1>
-    <p>There is nothing to show here as it is a sample website.</p>
+<body style="font-family:Poppins; text-align:center; margin-top:100px; background-color: rgb(0, 255, 26);">
+<div class="success-container">
+    <h1 class="animate-title">Application Submitted</h1>
+    <h3 class="animate-text">
+        There is nothing to show here as it is a sample website.
+    </h3>
+</div>
 </body>
 </html>
+
+
